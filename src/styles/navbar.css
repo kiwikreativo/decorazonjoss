@@ -1,0 +1,23 @@
+.btn-calendly {
+    background-color: #fb6f92;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: #fb6f92;
+}
+
+.cora {
+    color: #fb6f92;
+}

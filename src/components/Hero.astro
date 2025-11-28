@@ -1,0 +1,146 @@
+---
+import heroImage from "../assets/colorful-party-balloons-and-decorations-celebratio.webp";
+---
+
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <h1
+                class="text-5xl md:text-8xl font-bold text-foreground leading-tight text-balance"
+            >
+                Haz de cada celebracion un momento inolvidable
+            </h1>
+            <p class="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                Transforma tus momentos especiales en recuerdos mágicos con
+                nuestros servicios de decoracion para eventos. Desde reuniones
+                íntimas hasta celebraciones grandiosas, traemos tu visión a
+                vida.
+            </p>
+            <div class="btn-group gap-3">
+                <button type="button" class="reserva"
+                    >Reserva <i
+                        class="fa-solid fa-arrow-right ms-3"
+                        style="font-size: 0.9rem;"></i></button
+                >
+                <button type="button" class="btn-decoraciones"
+                    >Ver decoraciones</button
+                >
+            </div>
+        </div>
+        <div class="col-6 relative-container">
+            <div class="image-wrapper">
+                <img
+                    class="w-full h-full object-cover figure"
+                    src={heroImage.src}
+                    alt="Colorful party balloons and decorations"
+                />
+                <div class="badge">
+                    <span class="badge-number">500+</span>
+                    <span class="badge-text">Happy Celebrations</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .container {
+        margin: 10% auto;
+    }
+    .row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .figure {
+        border-radius: 10px;
+        display: block; /* Removes bottom space */
+    }
+    .relative-container {
+        position: relative;
+    }
+    .image-wrapper {
+        position: relative;
+        display: inline-block; /* Fits the content */
+        width: 100%;
+    }
+    .badge {
+        position: absolute;
+        bottom: 30px;
+        left: -50px;
+        background-color: #dfae1d; /* Mustard yellow color */
+        padding: 20px 30px;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        z-index: 10;
+        min-width: 200px;
+    }
+    .badge-number {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: #1a1a1a;
+        line-height: 1;
+        margin-bottom: 5px;
+    }
+    .badge-text {
+        font-size: 1rem;
+        color: #333;
+        font-weight: 500;
+    }
+
+    .reserva {
+        border-radius: 15px;
+        padding: 10px 20px;
+        background-color: #fb6f92;
+        border-color: #fb6f92;
+        color: white;
+    }
+    .btn-group {
+        margin: 1rem auto;
+    }
+
+    .btn-decoraciones {
+        color: #828080;
+        border: 1px solid #d5d5d5;
+        border-radius: 10px;
+        padding: 5px 15px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-decoraciones:hover {
+        background-color: #a2d2ff;
+        color: #caf0f8;
+        border-color: #a2d2ff;
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            margin: 5% auto;
+        }
+        .row {
+            flex-direction: column;
+        }
+        .figure {
+            width: 100%;
+        }
+        .btn-group {
+            flex-direction: column;
+            gap: 0.5rem;
+            width: 100%;
+        }
+        .badge {
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -30px;
+            width: 80%;
+            align-items: center;
+        }
+        .image-wrapper {
+            margin-bottom: 40px; /* Space for the badge */
+        }
+    }
+</style>
