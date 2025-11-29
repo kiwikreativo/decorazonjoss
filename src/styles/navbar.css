@@ -1,23 +1,201 @@
-.btn-calendly {
-    background-color: #fb6f92;
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-    padding: 5px 15px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+@import url('https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Fontdiner+Swanky&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+
+/* Sticky Navbar with Blur Background */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.container-navbar {
+    font-family: "Inter";
+    width: 100%;
+    margin: 0 auto;
+    /* Center the navbar  horizontally*/
+
+}
+
+.container-navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-brand {
+    font-family: "Fontdiner Swanky", serif;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    color: #000000 !important;
+    margin-left: 2vw;
+    margin-right: -1vw;
+    margin-top: 2px;
+}
+
+.logo-icon {
+    width: 32px !important;
+    height: 32px !important;
+    margin-bottom: 8px;
+    margin-right: -1vw;
+    margin-left: 1vw;
+    color: #fb6f92;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+    color: #000000 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: inline-block !important;
+    font-size: 16px !important;
 }
 
 a:hover {
-    color: #fb6f92;
+    color: #fb6f92 !important;
 }
 
-.cora {
+.btn-calendly {
+    background-color: #fb6f92;
+    color: #fff;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 1vw;
+
+}
+
+/* Custom Menu Icon Styling */
+.navbar-toggler {
+    border: none;
+    padding: 0.25rem 0.5rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.menu-icon {
     color: #fb6f92;
+    width: 28px;
+    height: 28px;
+}
+
+/* Hamburger Menu Styles - Column Layout */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        text-align: center;
+    }
+
+    .navbar-nav {
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100%;
+        gap: 0;
+    }
+
+    .nav-item {
+        width: 100%;
+        text-align: center;
+        margin: -10px 0;
+    }
+
+    .nav-link {
+        display: block !important;
+        width: 100%;
+        padding: 8px 15px !important;
+    }
+
+    .btn-calendly {
+        margin: 25px auto 10px;
+        display: block;
+        width: fit-content;
+    }
+}
+
+/* Mobile: up to 700px */
+@media (max-width: 700px) {
+    .container-navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 12px 0;
+        font-size: 16px;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .logo {
+        width: 100px;
+        margin: 0 0 12px 0;
+    }
+}
+
+/* Tablet: 701px to 1024px */
+@media (min-width: 701px) and (max-width: 1024px) {
+    .container-navbar {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 3vw;
+        font-size: 15px;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 24px;
+        margin-right: 0;
+    }
+
+    .logo {
+        width: 110px;
+        margin-right: 3vw;
+    }
+}
+
+/* Desktop: 1025px and up */
+@media (min-width: 1025px) {
+    .container-navbar {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 8vw;
+        font-size: 14px;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+        margin-right: 0;
+    }
+
+    .logo {
+        width: 120px;
+    }
 }

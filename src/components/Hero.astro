@@ -30,7 +30,7 @@ import heroImage from "../assets/colorful-party-balloons-and-decorations-celebra
         <div class="col-6 relative-container">
             <div class="image-wrapper">
                 <img
-                    class="w-full h-full object-cover figure"
+                    class="w-100 object-cover figure"
                     src={heroImage.src}
                     alt="Colorful party balloons and decorations"
                 />
@@ -45,7 +45,7 @@ import heroImage from "../assets/colorful-party-balloons-and-decorations-celebra
 
 <style>
     .container {
-        margin: 10% auto;
+        margin: 5% auto;
     }
     .row {
         display: flex;
@@ -92,10 +92,10 @@ import heroImage from "../assets/colorful-party-balloons-and-decorations-celebra
     }
 
     .reserva {
+        border: none;
         border-radius: 15px;
         padding: 10px 20px;
         background-color: #fb6f92;
-        border-color: #fb6f92;
         color: white;
     }
     .btn-group {
@@ -103,6 +103,7 @@ import heroImage from "../assets/colorful-party-balloons-and-decorations-celebra
     }
 
     .btn-decoraciones {
+        background-color: transparent;
         color: #828080;
         border: 1px solid #d5d5d5;
         border-radius: 10px;
@@ -127,6 +128,16 @@ import heroImage from "../assets/colorful-party-balloons-and-decorations-celebra
         .figure {
             width: 100%;
         }
+        .badge {
+            padding: 5px 15px;
+            min-width: 150px;
+        }
+        .badge-number {
+            font-size: 1.8rem;
+        }
+        .badge-text {
+            font-size: 0.8rem;
+        }
         .btn-group {
             flex-direction: column;
             gap: 0.5rem;
@@ -141,6 +152,25 @@ import heroImage from "../assets/colorful-party-balloons-and-decorations-celebra
         }
         .image-wrapper {
             margin-bottom: 40px; /* Space for the badge */
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .badge {
+            position: absolute;
+            bottom: 30px;
+            left: -30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 15px;
+            border-radius: 20px;
+        }
+        .badge-number {
+            font-size: 1.6rem;
+        }
+        .badge-text {
+            font-size: 0.8rem;
         }
     }
 </style>
