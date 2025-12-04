@@ -68,7 +68,7 @@ let services: Service[] = [
     >
         {
             services.map((service) => (
-                <div class="card mb-4" style="width: 30rem; height: 15rem;">
+                <div class="card mb-3" style="width: 30rem; height: 15rem;">
                     <div class="card-body">
                         <div class="card-icon">
                             <service.icon />
@@ -98,8 +98,9 @@ let services: Service[] = [
     .container-services {
         margin: 5% auto;
         width: 100%;
-        background-color: rgba(247, 225, 215, 0.2);
+        background-color: rgba(247, 225, 215, 0.3);
         height: fit-content;
+        padding-bottom: 3%;
     }
 
     .greeting {
@@ -193,6 +194,7 @@ let services: Service[] = [
         .greeting-p {
             margin-left: 0 !important;
             line-height: 1;
+            width: 90%;
         }
     }
 
