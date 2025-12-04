@@ -5,7 +5,7 @@ import heroImage from "../assets/colorful-party-balloons-and-decorations-celebra
 <div class="container-hero">
     <div class="row">
         <div class="col-6">
-            <h1 class="title">Haz de cada celebracion inolvidable</h1>
+            <h1 class="title">Haz cada celebración inolvidable</h1>
             <p class="hero-text">
                 Transforma tus momentos especiales en recuerdos mágicos con
                 nuestros servicios de decoracion para eventos. Desde reuniones
@@ -40,6 +40,7 @@ import heroImage from "../assets/colorful-party-balloons-and-decorations-celebra
 </div>
 
 <style>
+    @import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
     .container-hero {
         margin: 5% auto;
         width: 95%;
@@ -52,6 +53,7 @@ import heroImage from "../assets/colorful-party-balloons-and-decorations-celebra
     }
 
     .title {
+        font-family: "Antonio", sans-serif !important;
         font-size: 4rem;
         line-height: 1;
         font-weight: bold;
@@ -125,31 +127,40 @@ import heroImage from "../assets/colorful-party-balloons-and-decorations-celebra
 
     @media (max-width: 700px) {
         .container {
+            margin: 0 auto;
+            width: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-            width: 100%;
+            justify-content: center;
         }
         .row {
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
             width: 100%;
         }
         .col-6 {
-            width: 200%;
+            width: 100%;
             padding: 0 0.7rem;
+            text-align: center;
         }
         .title {
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-weight: bold;
-            line-height: 1;
+            line-height: 1.2;
+            text-align: left;
+            margin: 1rem 4%;
         }
         .hero-text {
             font-size: 1rem;
             line-height: 1.5;
+            text-align: left;
+            margin: 1rem 4%;
+        }
+        .figure {
+            margin: 1rem 3%;
         }
         .badge {
             bottom: -10px;
@@ -157,6 +168,7 @@ import heroImage from "../assets/colorful-party-balloons-and-decorations-celebra
             left: -10px;
             height: 70px;
             padding: 10px;
+            margin: 1rem 3%;
         }
         .badge-number {
             font-size: 2rem;
@@ -166,7 +178,7 @@ import heroImage from "../assets/colorful-party-balloons-and-decorations-celebra
             font-weight: 600;
         }
         .btn-group {
-            margin: 1rem auto;
+            margin: 1rem 3%;
             display: flex;
             flex-direction: column;
             align-items: center;

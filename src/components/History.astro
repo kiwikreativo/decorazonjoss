@@ -1,0 +1,108 @@
+---
+import { Instagram, Facebook, CalendarRange } from "@lucide/astro";
+---
+
+<!--  -->
+<div class="container-history">
+    <div class="row">
+        <div class="col-4">
+            <h1 class="history-title">Sobre Mi</h1>
+            <p class="history-text">
+                En 2015, Jocelyn Segura fundó Decorazon Joss. Empresa líder en
+                decoración de eventos, crean ambientes mágicos y únicos.
+                Destacan por su creatividad, calidad y la confianza ganada en la
+                región.
+            </p>
+
+            <div class="social-icons">
+                <a href="" class="ig">
+                    <Instagram />
+                </a>
+                <a href="" class="fb">
+                    <Facebook />
+                </a>
+            </div>
+        </div>
+        <div class="col-4">
+            <h3 class="history-title">historia decorazonjoss</h3>
+            <p class="history-text">
+                En 2015, Jocelyn Segura fundó Decorazon Joss. Empresa líder en
+                decoración de eventos, crean ambientes mágicos y únicos.
+                Destacan por su creatividad, calidad y la confianza ganada en la
+                región.
+            </p>
+            <div class="social-icons">
+                <a href="" class="ig">
+                    <Instagram />
+                </a>
+                <a href="" class="fb">
+                    <Facebook />
+                </a>
+                <a href="" class="cal">
+                    <CalendarRange />
+                </a>
+            </div>
+        </div>
+        <div class="col-4">
+            <img src="https://i.pravatar.cc/300" alt="" class="figure-bio" />
+        </div>
+    </div>
+</div>
+<!-- </div> -->
+
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+    .container-history {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: left;
+        text-align: left;
+        margin-left: 130px;
+    }
+    .row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .history-title {
+        font-family: "Antonio", sans-serif !important;
+        text-transform: uppercase;
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-left: 30px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    .history-text {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-left: 30px;
+        font-family: "Inter", sans-serif !important;
+    }
+
+    .social-icons {
+        display: flex;
+        gap: 10px;
+        margin-left: 40%;
+        margin-bottom: 5%;
+    }
+
+    .ig:hover {
+        transform: scale(1.2);
+    }
+    .fb:hover {
+        transform: scale(1.2);
+    }
+    .cal:hover {
+        transform: scale(1.2);
+    }
+
+    .figure-bio {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin-left: 120px;
+    }
+</style>
