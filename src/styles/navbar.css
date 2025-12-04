@@ -36,6 +36,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin-right: 10px;
 }
 
 .navbar-brand {
@@ -49,11 +50,11 @@
 }
 
 .logo-icon {
-    width: 32px !important;
-    height: 32px !important;
+    width: 24px !important;
+    height: 24px !important;
     margin-bottom: 8px;
-    margin-right: -1vw;
-    margin-left: 1vw;
+    margin-right: -2vw;
+    margin-left: 2vw;
     color: #fb6f92;
 }
 
@@ -140,11 +141,17 @@ a:hover {
     }
 
     .navbar-nav {
-        flex-direction: column;
-        align-items: center;
-        margin: 0;
-        width: 100%;
-        gap: 12px;
+        font-size: 1rem;
+        font-weight: bold;
+        line-height: 3;
+        margin: 1rem auto;
+    }
+
+    .btn-calendly {
+        width: 80%;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border-radius: 15px;
     }
 
     .logo {
@@ -164,12 +171,13 @@ a:hover {
     }
 
     .navbar-nav {
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: center;
-        gap: 24px;
-        margin-right: 0;
+        font-size: 1rem;
+        font-weight: bold;
+        line-height: 3;
+        margin: 1rem auto;
     }
+
+
 
     .logo {
         width: 110px;
@@ -178,24 +186,11 @@ a:hover {
 }
 
 /* Desktop: 1025px and up */
-@media (min-width: 1025px) {
-    .container-navbar {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px 8vw;
-        font-size: 14px;
-    }
-
-    .navbar-nav {
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 32px;
-        margin-right: 0;
-    }
-
-    .logo {
-        width: 120px;
+@media (max-width: 991px) {
+    .btn-calendly {
+        width: 80%;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border-radius: 15px;
     }
 }

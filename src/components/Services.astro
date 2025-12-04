@@ -1,0 +1,264 @@
+---
+import {
+    Baby,
+    Gift,
+    Cake,
+    Heart,
+    TreePine,
+    PartyPopper,
+    type Icon as IconType,
+} from "@lucide/astro";
+
+interface Service {
+    title: string;
+    description: string;
+    icon: typeof IconType;
+}
+
+let services: Service[] = [
+    {
+        icon: Baby,
+        title: "Revelaciones de Género",
+        description:
+            "Crea anticipación con impresionantes montajes de revelación de género que incluyen globos, pancartas y decoraciones temáticas.",
+    },
+    {
+        icon: Gift,
+        title: "Baby Showers",
+        description:
+            "Celebra nuevos comienzos con adorables decoraciones para baby showers en tonos pastel suaves y temas encantadores.",
+    },
+    {
+        icon: Cake,
+        title: "Cumpleaños",
+        description:
+            "Desde primeros cumpleaños hasta celebraciones de hitos, creamos ambientes de fiesta mágicos y apropiados para cada edad.",
+    },
+    {
+        icon: Heart,
+        title: "Bodas",
+        description:
+            "Decoraciones de boda elegantes y románticas adaptadas a tu historia de amor y estilo únicos.",
+    },
+    {
+        icon: TreePine,
+        title: "Fiestas de Navidad",
+        description:
+            "Decoraciones festivas que capturan la calidez y la alegría de la temporada navideña.",
+    },
+    {
+        icon: PartyPopper,
+        title: "Eventos Especiales",
+        description:
+            "Decoraciones personalizadas para aniversarios, graduaciones, eventos corporativos y cualquier celebración que imagines.",
+    },
+];
+---
+
+<div class="container-services">
+    <div class="greeting">
+        <h1 class="greeting-h1 mt-2">Celebraciones que decoramos</h1>
+        <p class="greeting-p">
+            Cualquiera que sea la ocasión, transformaremos tu espacio en una
+            obra maestra de celebración.
+        </p>
+    </div>
+    <div
+        class="cards d-flex flex-direction-column justify-content-center align-items-center"
+    >
+        {
+            services.map((service) => (
+                <div class="card mb-4" style="width: 30rem; height: 15rem;">
+                    <div class="card-body">
+                        <div class="card-icon">
+                            <service.icon />
+                        </div>
+                        <h4
+                            class="card-title mt-4 mb-1"
+                            style="font-weight: bold; font-size: 16px; margin-left: 12px;"
+                        >
+                            {service.title}
+                        </h4>
+                        <p
+                            class="card-text"
+                            style="color: grey; font-size: 14px;"
+                        >
+                            {service.description}{" "}
+                        </p>
+                    </div>
+                </div>
+            ))
+        }
+    </div>
+</div>
+
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+    .container-services {
+        margin: 5% auto;
+        width: 100%;
+        background-color: rgba(247, 225, 215, 0.2);
+        height: fit-content;
+    }
+
+    .greeting {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        line-height: 0.5;
+        justify-content: center;
+    }
+
+    .greeting h1 {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .greeting p {
+        margin-left: 3.5%;
+    }
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
+        gap: 20px;
+    }
+
+    .card {
+        width: 20rem;
+        margin-left: 20px;
+        margin-top: 20px;
+        color: rgb(5, 5, 5);
+        border-color: rgba(32, 31, 31, 0.1);
+        border-radius: 8px;
+    }
+
+    .card:hover {
+        box-shadow: 1px 2px 17px 8px rgba(255, 200, 221, 0.35);
+        -webkit-box-shadow: 1px 2px 17px 8px rgba(255, 200, 221, 0.35);
+        -moz-box-shadow: 1px 2px 17px 8px rgba(255, 200, 221, 0.35);
+        border: none;
+    }
+
+    .card-icon {
+        font-size: 1.2rem;
+        color: #ffafcc;
+        background-color: rgba(222, 219, 210, 0.2);
+        margin-left: 10px;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 35%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45px;
+        height: 45px;
+    }
+
+    .card-body {
+        display: flex;
+        flex-direction: column; /* Use flexbox for layout */
+        align-items: flex-start; /* Align items vertically */
+        /* Add spacing between the icon and text */
+    }
+
+    .card-text {
+        margin-top: -15px;
+        text-align: left;
+        margin-top: 5px;
+        margin-left: 12px;
+    }
+
+    /* Mobile: up to 700px */
+    @media (max-width: 700px) {
+        .container-services {
+            width: 100%;
+            height: fit-content;
+            padding-bottom: 20px;
+        }
+
+        .card {
+            width: 20rem !important;
+            margin-left: 0;
+        }
+
+        .greeting {
+            width: 100%;
+        }
+
+        .greeting-p {
+            margin-left: 0 !important;
+            line-height: 1;
+        }
+    }
+
+    /* Tablet: 701px to 1024px */
+    @media (min-width: 701px) and (max-width: 1000px) {
+        .container-services {
+            width: 100%;
+            height: fit-content;
+        }
+
+        .card {
+            width: 20rem !important;
+            margin-left: 0;
+        }
+
+        .greeting {
+            width: 100%;
+        }
+
+        .greeting-p {
+            margin-left: 0 !important;
+            line-height: 1;
+        }
+    }
+
+    @media (min-width: 1001px) and (max-width: 1200px) {
+        .container-services {
+            width: 100%;
+            height: fit-content;
+        }
+
+        .card {
+            width: 18rem !important;
+            margin-left: 0;
+        }
+
+        .greeting {
+            width: 100%;
+        }
+
+        .greeting-p {
+            margin-left: 0 !important;
+            line-height: 1;
+        }
+    }
+
+    /* @media (min-width: 1025px) {
+        .container .greeting {
+            text-align: left;
+            margin: 10% 0 2% 8%;
+        }
+        .card {
+            width: 40rem;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+        .cards {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .dynamic-btn {
+            margin: 2% 69% 2% 4%;
+            width: fit-content;
+            display: inline-block;
+        }
+    } */
+</style>

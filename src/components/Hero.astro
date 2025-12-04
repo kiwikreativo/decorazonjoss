@@ -5,12 +5,10 @@ import heroImage from "../assets/colorful-party-balloons-and-decorations-celebra
 <div class="container">
     <div class="row">
         <div class="col-6">
-            <h1
-                class="text-5xl md:text-8xl font-bold text-foreground leading-tight text-balance"
-            >
+            <h1 class="title">
                 Haz de cada celebracion un momento inolvidable
             </h1>
-            <p class="text-lg md:text-xl text-muted-foreground leading-relaxed">
+            <p class="hero-text">
                 Transforma tus momentos especiales en recuerdos mágicos con
                 nuestros servicios de decoracion para eventos. Desde reuniones
                 íntimas hasta celebraciones grandiosas, traemos tu visión a
@@ -51,6 +49,10 @@ import heroImage from "../assets/colorful-party-balloons-and-decorations-celebra
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+    .title {
+        font-size: 2.5rem;
+        font-weight: bold;
     }
     .figure {
         border-radius: 10px;
@@ -118,59 +120,134 @@ import heroImage from "../assets/colorful-party-balloons-and-decorations-celebra
         border-color: #a2d2ff;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 700px) {
         .container {
-            margin: 5% auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
         }
         .row {
+            display: flex;
             flex-direction: column;
-        }
-        .figure {
+            justify-content: center;
+            align-items: center;
             width: 100%;
         }
+        .col-6 {
+            width: 200%;
+            padding: 0 0.7rem;
+        }
+        .title {
+            font-size: 2rem;
+            font-weight: bold;
+            line-height: 1;
+        }
+        .hero-text {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
         .badge {
-            padding: 5px 15px;
-            min-width: 150px;
+            bottom: -10px;
+            width: fit-content;
+            left: -10px;
+            height: 70px;
+            padding: 10px;
         }
         .badge-number {
-            font-size: 1.8rem;
+            font-size: 2rem;
         }
         .badge-text {
-            font-size: 0.8rem;
+            font-size: 1rem;
+            font-weight: 600;
         }
         .btn-group {
+            margin: 1rem auto;
+            display: flex;
             flex-direction: column;
-            gap: 0.5rem;
+            align-items: center;
             width: 100%;
         }
-        .badge {
-            left: 50%;
-            transform: translateX(-50%);
-            bottom: -30px;
-            width: 80%;
-            align-items: center;
+        .btn-decoraciones {
+            width: 100%;
+            padding: 10px 20px;
+            border-radius: 15px;
+            font-size: 1rem;
         }
-        .image-wrapper {
-            margin-bottom: 40px; /* Space for the badge */
+        .reserva {
+            width: 100%;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 15px;
         }
     }
 
-    @media (max-width: 1200px) {
+    @media (min-width: 701px) and (max-width: 1024px) {
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        .row {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        .col-6 {
+            width: 200%;
+            padding: 0 0.7rem;
+        }
+
+        .title {
+            font-size: 2rem;
+            font-weight: bold;
+            line-height: 1;
+        }
+        .hero-text {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        .badge {
+            bottom: -10px;
+            width: fit-content;
+            left: -10px;
+            height: 70px;
+            padding: 10px;
+        }
+        .badge-number {
+            font-size: 2rem;
+        }
+        .badge-text {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        .btn-group {
+            display: flex;
+            align-items: start;
+            justify-content: start;
+            margin-bottom: 5%;
+            margin-top: 5%;
+        }
+        .btn-decoraciones {
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 1rem;
+        }
+        .reserva {
+            padding: 6px 15px;
+            border-radius: 15px;
+            font-size: 1rem;
+        }
         .badge {
             position: absolute;
             bottom: 30px;
-            left: -30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 10px 15px;
-            border-radius: 20px;
-        }
-        .badge-number {
-            font-size: 1.6rem;
-        }
-        .badge-text {
-            font-size: 0.8rem;
+            left: -50px;
+            padding: 10px 20px;
         }
     }
 </style>
