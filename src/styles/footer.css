@@ -80,8 +80,8 @@
 }
 
 .footer-links a:hover {
-    color: #0052cc;
-    text-decoration: underline;
+    color: #a15d40;
+    text-decoration:solid;
 }
 
 /* Social Links */
@@ -90,12 +90,13 @@
     gap: 1rem;
 }
 
-.social-links a {
+.social-links .icon {
     width: 40px;
     height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     border: 2px solid #000;
     border-radius: 8px;
     color: #000;
@@ -108,9 +109,9 @@
     transform: translateY(-2px);
 }
 
-.social-links svg {
-    width: 20px;
-    height: 20px;
+.social-links .fa-brands {
+   font-size: 20px;
+   margin-top: 6px;
 }
 
 /* Footer Bottom */
@@ -168,10 +169,5 @@
     .social-links a {
         width: 36px;
         height: 36px;
-    }
-
-    .social-links svg {
-        width: 18px;
-        height: 18px;
     }
 }

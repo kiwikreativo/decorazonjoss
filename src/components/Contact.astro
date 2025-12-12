@@ -1,0 +1,311 @@
+---
+import { Phone, Mail, MapPin, Send  } from "@lucide/astro";
+---
+<div class="contact-container">
+    <div class="salute">
+        <h1 class="salute-title">Planeemos tu celebración al detalle</h1>
+        <p class="salute-text">Listos para crear memorias inolvidables? ponte en contacto y empecemos a planear</p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <div class="container-form">
+                    <div class="mb-3">
+                       
+                        <input
+                            type="text"
+                            class="form-control"
+                            required
+                            placeholder="Nombre"
+                        />
+                    </div>
+                    <div class="mb-3">
+                        <input
+                            type="email"
+                            class="form-control"
+                            required
+                            placeholder="Correo"
+                        />
+                    </div>
+                    <div class="mb-3">
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Telefono"
+                        />
+                    </div>
+                    <div class="mb-3">
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Tipo de evento"
+                            required
+                        />
+                    </div>
+                    <div class="mb-3">
+                        <textarea
+                            class="form-control"
+                            placeholder="Cuentanos acerca de tu evento."
+                            rows="3"></textarea>
+                    </div>
+                    <button class="submit">Enviar mensaje <Send class="send" /> </button>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="mb-3 contact-item">
+                    <div class="icon-wrapper">
+                        <Phone class="icon" />
+                    </div>
+                    <div class="contact-info">
+                        <p class="contact-title ms-3">Telefono</p>
+                        <p class="contact-detail">+506 8888-8888</p>
+                    </div>
+                </div>
+                <div class="mb-3 contact-item">
+                    <div class="icon-wrapper">
+                        <Mail class="icon" />
+                    </div>
+                    <div class="contact-info">
+                        <p class="contact-title">Email</p>
+                        <p class="contact-detail email">joss@decorazonjoss.com</p>
+                    </div>
+                </div>
+                <div class=" contact-item">
+                    <div class="icon-wrapper">
+                        <MapPin class="icon" />
+                    </div>
+                    <div class="contact-info">
+                            <p class="contact-title ms-5">Ubicación</p>
+                            <p class="contact-detail address">Alajuela, Costa Rica</p>
+                    </div>
+                </div>
+                <div class="business-hours">
+                    <h2>Horario Laboral</h2>
+                    <div class="hours-item">Lunes - Viernes: 6:30 PM - 9:30 PM</div>
+                    <div class="hours-item">Las decoraciones se hacen los dias sabados y domingo con previa cita</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+    .contact-container{
+        margin: 50px 0;  
+        text-align: center; 
+    }
+    .container{
+        padding: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .container-form{
+        border: 2px solid #f6f3f4;
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .salute-title{
+        font-family: "Geist", sans-serif;
+        font-weight: bold;
+        font-size: 3rem;
+    }
+    .salute-text{
+        font-family: "Inter", sans-serif;
+        font-size: 1.2rem;
+        color: #b7b7b7;
+    }
+
+    /* Custom focus style with pink highlight */
+    .form-control:focus,
+    textarea:focus,
+    input:focus {
+        outline: none;
+        border: none;
+        border-color: #ffafcc;
+        box-shadow: 0 0 0 0.25rem rgba(255, 175, 204, 0.25);
+    }
+    /* Style for form controls */
+    .form-control {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 15px;
+        border-radius: 15px;
+        font-family: 'Inter', sans-serif;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+    
+    textarea.form-control {
+        min-height: 120px;
+        resize: none;
+       
+    }
+
+    .submit{
+        width: 100%;
+        border: none;
+        border-radius: 15px;
+        background-color: #ffafcc;
+        color: white;
+        padding: 8px;
+    }
+    .send{
+        width: 20px;
+    }
+
+
+    /* styling placeholder */
+
+    /* Style for all placeholders */
+    ::placeholder {
+        color: #999;  /* Light gray color */
+        font-family: 'Geist', sans-serif;
+        opacity: 1;  
+    }
+
+    /* For WebKit browsers (Chrome, Safari) */
+    ::-webkit-input-placeholder {
+        color: #999;
+        font-family: 'Inter', sans-serif;
+    }
+
+    /* For Firefox */
+    ::-moz-placeholder {
+        color: #999;
+        font-family: 'Inter', sans-serif;
+        opacity: 1;  /* Firefox adds opacity by default */
+    }
+
+    /* For Internet Explorer */
+    :-ms-input-placeholder {
+        color: #999;
+        font-family: 'Inter', sans-serif;
+    }
+
+    /* For Microsoft Edge */
+    :-ms-input-placeholder {
+        color: #999;
+        font-family: 'Inter', sans-serif;
+    }
+    .contact-item{
+        display: flex;
+        flex-direction: column;
+        line-height: 0.8;        
+    }
+    .text{
+        font-size: 12px;
+    }
+
+    .icon-wrapper{
+        position: absolute;
+        left: 65%;
+        color: #ffafcc;
+        background-color: #f6f3f4;
+        border-radius: 20px; 
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    
+    .contact-info{
+        flex: 1;
+        padding-top: 4px;
+    }
+
+    .contact-title{
+        font-family: "Geist", sans-serif;
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+    .contact-detail{
+        font-size: 1.2rem;
+        color: #d5d4d4;
+        line-height: 1.2;
+        margin-left: 15%;
+    }
+
+    .address{
+        margin-left: 24%;
+    }
+
+    .email{
+        margin-left: 33%;
+    }
+   
+
+    .business-hours {
+            background-color: #f9f9f9;
+            border-radius: 16px;
+            padding: 15px;
+            margin-top: 10px;
+            margin-left: 30%;
+        }
+
+        .business-hours h2 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .hours-item {
+            font-size: 16px;
+            color: #5f6368;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .hours-item:last-child {
+            margin-bottom: 0;
+        }
+   
+
+        @media (max-width: 768px) {
+            .contact-container{
+                display: flex;
+                flex-direction: column;
+            }
+
+            .row{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .col-6{
+                width: 100%;
+                margin-bottom: 10%;
+            }
+
+            .icon-wrapper{
+                position: absolute;
+                left: 30%;
+                color: #ffafcc;
+                background-color: #f6f3f4;
+                border-radius: 20px; 
+                width: 50px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .business-hours{
+                margin-right: 50%;
+                margin-top: 10%;
+                width: 50%;
+            }
+           
+
+        }
+</style>
+
+
