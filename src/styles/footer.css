@@ -2,8 +2,8 @@
 
 .footer {
     background-color: #f8f8f8;
-    padding: 4rem 0 2rem;
-    margin-top: auto;
+    padding: 3rem 0 2rem;
+    height: fit-content;
 }
 
 .footer-container {
@@ -97,21 +97,21 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    border: 2px solid #000;
-    border-radius: 8px;
-    color: #000;
-    transition: all 0.2s ease;
+    border: none;
+    background-color: rgba(255, 175, 204, 0.3);
+    border-radius: 15px;
 }
 
 .social-links a:hover {
-    background-color: #000;
-    color: #fff;
+    background-color: rgba(162, 210, 255, 0.3);
+    color: rgba(205, 180, 219, 0.8);
     transform: translateY(-2px);
 }
 
 .social-links .fa-brands {
    font-size: 20px;
-   margin-top: 6px;
+   margin-top: 10px;
+   color: #81c3d7;
 }
 
 /* Footer Bottom */

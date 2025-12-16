@@ -3,7 +3,7 @@ import { Instagram, Facebook, CalendarRange } from "@lucide/astro";
 ---
 
 <!--  -->
-<div class="container-history" id="AboutUs">
+<div class="container-history" id="about">
     <div class="row">
         <div class="col-4">
             <h1 class="history-title">Sobre Mi</h1>
@@ -60,11 +60,14 @@ import { Instagram, Facebook, CalendarRange } from "@lucide/astro";
         align-items: left;
         justify-content: left;
         text-align: left;
+        padding: 100px 10%;
+        margin: 0 auto;
         
     }
     .row {
         display: flex;
         flex-direction: row;
+        margin-left: 6%;
         
     }
 
@@ -110,13 +113,14 @@ import { Instagram, Facebook, CalendarRange } from "@lucide/astro";
         height: 200px;
         border-radius: 50%;
         margin-left: 100px;
-        margin-top: 50px;
+        margin-top: 25px;
         border: 3px groove #dd2d4a;
     }
 
 
     @media (max-width: 768px) {
-        .container-history{
+        .container-history {
+            padding: 50px 5%; 
             display: flex;
             flex-direction: column;
             width: 100%;
@@ -130,7 +134,7 @@ import { Instagram, Facebook, CalendarRange } from "@lucide/astro";
         .col-4 {
             width: 90%;
             text-align: center;
-            margin-left: 2%;
+            margin-left: 0;
         }
         .social-icons {
             margin-left: 45%;
