@@ -1,0 +1,60 @@
+.btn-filter {
+    border: 1px solid #edafb8;
+    background-color: beige;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 5px;
+    /* Add some margin to ensure spacing */
+    white-space: nowrap;
+    /* Prevent button text from wrapping */
+    cursor: pointer;
+}
+
+/* Ensure the flex container has proper spacing */
+.flex.flex-wrap {
+    gap: 12px;
+    /* This will add space between buttons */
+    padding: 8px 0;
+    /* Add some vertical padding */
+}
+
+
+.btn-filter.active {
+    background-color: #edafb8;
+    color: white;
+    border: none;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery-item {
+    width: 500px;
+    gap: 10px;
+}
+
+.gallery-image {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05);
+    /* Zoom in by 5% */
+    transition: transform 0.3s ease-in-out;
+    opacity: 0.7;
+}
