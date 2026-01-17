@@ -69,6 +69,9 @@ let creations: Creations[] = [
         width: 100%;
         height: fit-content;
         padding-bottom: 3%;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
     .greeting {
         display: flex;
@@ -97,6 +100,7 @@ let creations: Creations[] = [
         justify-content: center;
         margin-top: 20px;
         gap: 20px;
+        width: min(100%, 200px)
     }
 
     .gallery {
@@ -107,13 +111,11 @@ let creations: Creations[] = [
     }
 
     .gallery-item {
-        width: 500px;
         gap: 10px;
     }
 
     .gallery-image {
-        width: 500px;
-        height: 500px;
+        
         object-fit: cover;
         border-radius: 10px;
     }
@@ -135,65 +137,5 @@ let creations: Creations[] = [
         cursor: pointer;
     }
 
-    @media (max-width: 768px) {
-        .greeting-p {
-            font-size: 1rem;
-            line-height: 1;
-            margin-right: 10px;
-        }
-
-        .cards{
-            margin-left: 1%;
-        }
-
-        .gallery {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin-left: 0;
-        }
-
-        .gallery-item {
-            width: 350px;
-            gap: 10px;
-        }
-
-        .gallery-image {
-            width: 350px;
-            height: 350px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-        .btn-decoraciones {
-            margin-top: 5%;
-        }
-    }
-    @media (max-width: 1078px) {
-        .greeting-p {
-            line-height: 1.2;
-        }
-        .gallery {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin-left: 0;
-        }
-
-        .gallery-item {
-            width: 400px;
-            gap: 10px;
-        }
-
-        .gallery-image {
-            width: 400px;
-            height: 400px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-        .btn-decoraciones {
-            margin-top: 5%;
-        }
-    }
+    
 </style>
