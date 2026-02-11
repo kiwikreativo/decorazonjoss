@@ -58,6 +58,16 @@ import heroImage from "../assets/colorful-party-balloons-and-decorations-celebra
         line-height: 1;
         font-weight: bold;
         margin-bottom: 2rem;
+        background: #fb6f92;
+        background: linear-gradient(
+            90deg,
+            rgba(251, 111, 146, 1) 0%,
+            rgba(255, 179, 198, 1) 50%,
+            rgba(255, 143, 171, 1) 100%
+        );
+        background-clip: text; /* Recorta el fondo a la forma del texto */
+        -webkit-background-clip: text; /* Para navegadores WebKit (Chrome, Safari) */
+        color: transparent;
     }
     .figure {
         border-radius: 10px;
@@ -228,7 +238,7 @@ import heroImage from "../assets/colorful-party-balloons-and-decorations-celebra
             font-size: 1rem;
             line-height: 1.5;
         }
-    
+
         .badge-number {
             font-size: 2rem;
         }
