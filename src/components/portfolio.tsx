@@ -28,6 +28,9 @@ export default function PortfolioGrid() {
                     <div className="gallery" key={item.id}>
                         <div className="gallery-item">
                             <img src={item.image} alt={item.alt} className="gallery-image" />
+                            <div className="gallery-overlay">
+                                <h3 className="gallery-title">{item.title}</h3>
+                            </div>
                         </div>
                     </div>
                 ))}
