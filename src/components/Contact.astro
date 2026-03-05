@@ -10,7 +10,7 @@ import { Send } from "@lucide/astro";
             empecemos a planear
         </p>
     </div>
-    <div class="container">
+    <div class="contact">
         <div class="row">
             <div class="col-6">
                 <div class="container-form">
@@ -100,9 +100,7 @@ import { Send } from "@lucide/astro";
                     </div>
                     <div class="contact-text">
                         <div class="contact-label">Location</div>
-                        <div class="contact-value">
-                            Alajuela, Costa Rica
-                        </div>
+                        <div class="contact-value">Alajuela, Costa Rica</div>
                     </div>
                 </div>
                 <div class="business-hours">
@@ -127,10 +125,14 @@ import { Send } from "@lucide/astro";
         margin: 0 auto;
         padding: 100px 0;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     .container {
         padding: 40px;
-        max-width: 1200px;
+        max-width: 2000px;
         margin: 0 auto;
     }
 
@@ -138,13 +140,17 @@ import { Send } from "@lucide/astro";
         border: 2px solid #f6f3f4;
         padding: 20px;
         border-radius: 15px;
-    }
-    
-    .row {
-        margin-left: 5%;
+        width: 500px;
     }
 
-    
+    .row {
+        margin-left: 5%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
     .salute-title {
         font-family: "Geist", sans-serif;
         font-weight: bold;
@@ -333,6 +339,36 @@ import { Send } from "@lucide/astro";
             margin-bottom: 10%;
         }
 
+        .container-contact {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container-form {
+            border: 2px solid #f6f3f4;
+            padding: 20px;
+            border-radius: 15px;
+            width: 300px;
+            margin-right: 20px;
+        }
+
+        .contact-item {
+            width: 100%;
+        }
+
+        .icon-circle {
+            margin-left: 0;
+        }
+
+        .contact-text {
+            flex: 1;
+        }
+
+        .contact-value {
+            white-space: nowrap;
+        }
+
         .icon-wrapper {
             position: absolute;
             left: 30%;
@@ -347,8 +383,8 @@ import { Send } from "@lucide/astro";
         }
 
         .business-hours {
-            margin-right: 50%;
             margin-top: 10%;
+            margin-left: 10%;
             width: 300px;
             height: 150px;
         }
@@ -376,8 +412,8 @@ import { Send } from "@lucide/astro";
             flex: 0.5;
             display: flex;
             flex-direction: column;
-            align-items: flex-start;  /* ✅ Esto alinea todo a la izquierda */
-            text-align: left;  /* ✅ Asegura que el texto esté alineado a la izquierda */
+            align-items: flex-start; /* ✅ Esto alinea todo a la izquierda */
+            text-align: left; /* ✅ Asegura que el texto esté alineado a la izquierda */
         }
 
         .contact-label {
@@ -385,24 +421,31 @@ import { Send } from "@lucide/astro";
             font-weight: bold;
             color: #1a1a1a;
             margin-bottom: 4px;
-            text-align: left;  /* ✅ Añade esto */
+            text-align: left; /* ✅ Añade esto */
         }
 
         .contact-value {
             font-size: 16px;
             color: #686868;
             line-height: 1.4;
-            text-align: left;  /* ✅ Añade esto */
+            text-align: left; /* ✅ Añade esto */
         }
-       
+
+        .container-contact {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .icon-circle {
+            margin-left: 0;
+        }
 
         .business-hours {
             background-color: #f9f9f9;
             border-radius: 16px;
-            /* padding: 20px; */
             width: 90%;
             margin-top: 15px;
-            margin-left: -5%;
         }
 
         .business-hours h2 {
@@ -424,5 +467,3 @@ import { Send } from "@lucide/astro";
         }
     }
 </style>
-
-
