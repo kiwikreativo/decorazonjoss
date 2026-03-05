@@ -5,7 +5,7 @@
 ---
 <Layout>
 
-    <div class="container-fluid">
+    <div class="container-portfolio">
         <div class="salute">
             <h1>Conoce nuestras decoraciones realizadas</h1>
             <p>En este espacio podras explorar nuestras creaciones, toda la vida y alegria que hemos brindado a cada celebracion</p>
@@ -17,11 +17,16 @@
 </Layout>
 <style>
 
-.container-fluid{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin: 5% auto;
+.container-portfolio{
+   width: 100%;
+   max-width: 1200px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: left;
+   padding: clamp(1rem, 5vw, 3rem);
+   margin: 5% auto;
 }
 
 .salute{
