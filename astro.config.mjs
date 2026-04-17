@@ -5,5 +5,10 @@ import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react()]
+  integrations: [react()],
+  server: {
+    host: true, // Allow external connections
+    // Optionally add this too:
+    allowedHosts: ['daron-argenteous-warmly.ngrok-free.dev']
+  }
 });

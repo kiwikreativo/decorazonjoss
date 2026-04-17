@@ -1,5 +1,6 @@
 ---
 import "./../styles/navbar.css";
+import "./../styles/globals.css"
 
 import { Heart } from "@lucide/astro";
 ---
@@ -8,7 +9,7 @@ import { Heart } from "@lucide/astro";
     <div class="container-fluid">
         <div class="navbar-logo">
             <Heart class="logo-icon" />
-            <a class="navbar-brand" href="#"> DecorazonJoss</a>
+            <a class="navbar-brand" href="/"> DecorazonJoss</a>
         </div>
         <button
             class="navbar-toggler"
@@ -39,39 +40,24 @@ import { Heart } from "@lucide/astro";
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#"
+                    <a class="nav-link active" aria-current="page" href="/"
                         >Inicio</a
                     >
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Decoraciones</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link">Contactame</a>
+                    <a class="nav-link" href="/#services">Servicios</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link">Sobre Mi</a>
+                    <a class="nav-link" href="/#creations">Decoraciones</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/#about">Sobre Mi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/#contact">Contactame</a>
                 </li>
             </ul>
             <button class="btn-calendly" type="submit">Reserva</button>
         </div>
     </div>
 </nav>
-
-<!-- <style>
-    @media (max-width: 700px) {
-        .navbar-nav {
-            font-size: 1rem;
-            font-weight: bold;
-            line-height: 2;
-            margin: 1rem auto;
-        }
-        .btn-calendly {
-            width: 80%;
-            padding: 10px 20px;
-            font-size: 1rem;
-            border-radius: 15px;
-        }
-    }
-</style> -->

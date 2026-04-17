@@ -1,0 +1,193 @@
+---
+import { Instagram, Facebook, CalendarRange } from "@lucide/astro";
+---
+
+<!--  -->
+<div class="container-history" id="about">
+    <div class="row">
+        <div class="col-4">
+            <h1 class="history-title">Sobre Mi</h1>
+            <p class="history-text">
+                En 2015, Jocelyn Segura fundó Decorazon Joss. Empresa líder en
+                decoración de eventos, crean ambientes mágicos y únicos.
+                Destacan por su creatividad, calidad y la confianza ganada en la
+                región.
+            </p>
+
+            <div class="social-icons">
+                <a href="" class="ig">
+                    <Instagram />
+                </a>
+                <a href="" class="fb">
+                    <Facebook />
+                </a>
+            </div>
+        </div>
+        <div class="col-4">
+            <h3 class="history-title">historia decorazonjoss</h3>
+            <p class="history-text">
+                En 2015, Jocelyn Segura fundó Decorazon Joss. Empresa líder en
+                decoración de eventos, crean ambientes mágicos y únicos.
+                Destacan por su creatividad, calidad y la confianza ganada en la
+                región.
+            </p>
+            <div class="social-icons-de">
+                <a href="" class="ig">
+                    <Instagram />
+                </a>
+                <a href="" class="fb">
+                    <Facebook />
+                </a>
+                <a href="" class="cal">
+                    <CalendarRange />
+                </a>
+            </div>
+        </div>
+        <div class="col-4">
+            <img src="https://i.pravatar.cc/300" alt="" class="figure-bio" />
+        </div>
+    </div>
+</div>
+<!-- </div> -->
+
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+    .container-history {
+        background-color: rgba(247, 225, 215, 0.3);
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: left;
+        text-align: left;
+        padding: 100px 10%;
+        margin: 0 auto;
+        
+    }
+    .row {
+        display: flex;
+        flex-direction: row;
+        margin-left: 6%;
+        
+    }
+
+    .history-title {
+        font-family: "Antonio", sans-serif !important;
+        text-transform: uppercase;
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-left: 35px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    .history-text {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-left: 35px;
+        font-family: "Inter", sans-serif !important;
+    }
+
+    .social-icons {
+        display: flex;
+        gap: 10px;
+        margin-left: 40%;
+        margin-bottom: 5%;
+    }
+    .social-icons-de{
+        margin-left: 35%;
+        margin-bottom: 5%;
+    }
+
+    .ig:hover {
+        transform: scale(1.2);
+    }
+    .fb:hover {
+        transform: scale(1.2);
+    }
+    .cal:hover {
+        transform: scale(1.2);
+    }
+
+    .figure-bio {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin-left: 100px;
+        margin-top: 25px;
+        border: 3px groove #dd2d4a;
+    }
+
+
+    @media (max-width: 768px) {
+        .container-history {
+            padding: 50px 5%; 
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .row{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .col-4 {
+            width: 90%;
+            text-align: center;
+            margin-left: 0;
+        }
+        .social-icons {
+            margin-left: 45%;
+        }
+
+        .social-icons-de {
+            margin-left: 5%;
+            margin-bottom: 5%;
+        }
+
+        .figure-bio{
+            margin-left: 5%;
+            margin-bottom: 5%;
+            margin-top: 5%;
+        }
+    }
+    @media (min-width: 769px) and (max-width: 1200px) {
+        .container-history {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            padding: 2rem 0;
+        }
+        
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .col-4 {
+            width: 45%;
+            margin: 0 2.5% 2rem;
+            text-align: center;
+        }
+        
+        .social-icons,
+        .social-icons-de {
+            margin: 20px auto;
+            justify-content: center;
+        }
+        
+        .figure-bio {
+            margin: 0 auto;
+            display: block;
+        }
+        
+        .history-title,
+        .history-text {
+            text-align: center;
+            margin-left: 0;
+        }
+    }
+</style>

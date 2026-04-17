@@ -1,0 +1,35 @@
+---
+    import "./../styles/globals.css"
+    import Layout from "@/layouts/Layout.astro"
+    import PortfolioGrid from "./../components/portfolio"
+---
+<Layout>
+
+    <div class="container-fluid">
+        <div class="salute">
+            <h1>Conoce nuestras decoraciones realizadas</h1>
+            <p>En este espacio podras explorar nuestras creaciones, toda la vida y alegria que hemos brindado a cada celebracion</p>
+        </div>
+        <div class="btn-filters">
+            <PortfolioGrid client:load />
+        </div>
+    </div> 
+</Layout>
+<style>
+
+.container-fluid{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 5% auto;
+}
+
+.salute{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 80%;
+    line-height: 1;
+}
+
+</style>

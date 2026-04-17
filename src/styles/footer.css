@@ -2,8 +2,8 @@
 
 .footer {
     background-color: #f8f8f8;
-    padding: 4rem 0 2rem;
-    margin-top: auto;
+    padding: 3rem 0 2rem;
+    height: fit-content;
 }
 
 .footer-container {
@@ -80,8 +80,8 @@
 }
 
 .footer-links a:hover {
-    color: #0052cc;
-    text-decoration: underline;
+    color: #a15d40;
+    text-decoration:solid;
 }
 
 /* Social Links */
@@ -90,27 +90,28 @@
     gap: 1rem;
 }
 
-.social-links a {
+.social-links .icon {
     width: 40px;
     height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid #000;
-    border-radius: 8px;
-    color: #000;
-    transition: all 0.2s ease;
+    text-align: center;
+    border: none;
+    background-color: rgba(255, 175, 204, 0.3);
+    border-radius: 15px;
 }
 
 .social-links a:hover {
-    background-color: #000;
-    color: #fff;
+    background-color: rgba(162, 210, 255, 0.3);
+    color: rgba(205, 180, 219, 0.8);
     transform: translateY(-2px);
 }
 
-.social-links svg {
-    width: 20px;
-    height: 20px;
+.social-links .fa-brands {
+   font-size: 20px;
+   margin-top: 10px;
+   color: #81c3d7;
 }
 
 /* Footer Bottom */
@@ -168,10 +169,5 @@
     .social-links a {
         width: 36px;
         height: 36px;
-    }
-
-    .social-links svg {
-        width: 18px;
-        height: 18px;
     }
 }
