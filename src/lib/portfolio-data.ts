@@ -25,9 +25,9 @@ export const categories: Category[] = [
 
 export const portfolioItems: PortfolioItem[] = [
     {
-        id: "special-1",
+        id: "baby-shower-4",
         title: "Bienvenido bebe",
-        category: "special",
+        category: "baby-shower",
         image: "/src/assets/8.webp",
         alt: "Welcome baby orange, blue and white",
     },
@@ -88,7 +88,7 @@ export const portfolioItems: PortfolioItem[] = [
         alt: "Festive birthday party decoration with orange, rose, gold and white colors",
     },
     {
-        id: "special-1",
+        id: "birthday-7",
         title: "Cumpleaños 77 de vaquero",
         category: "birthday",
         image: "/src/assets/17.webp",

@@ -1,5 +1,4 @@
 ---
-import { Send } from "@lucide/astro";
 ---
 
 <div class="contact-container" id="contact">
@@ -11,7 +10,7 @@ import { Send } from "@lucide/astro";
         </p>
     </div>
     <div class="contact">
-        <div class="row">
+        <div class="row" style="display: flex; justify-content: space between;">
             <div class="col-6">
                 <div class="container-form">
                     <div class="mb-3">
@@ -51,8 +50,8 @@ import { Send } from "@lucide/astro";
                             placeholder="Cuentanos acerca de tu evento."
                             rows="3"></textarea>
                     </div>
-                    <button class="submit"
-                        >Enviar mensaje <Send class="send" />
+                    <button class="submit">
+                        Enviar mensaje
                     </button>
                 </div>
             </div>
@@ -67,8 +66,8 @@ import { Send } from "@lucide/astro";
                         </svg>
                     </div>
                     <div class="contact-text">
-                        <div class="contact-label">Phone</div>
-                        <div class="contact-value">(555) 123-4567</div>
+                        <div class="contact-label">Télefono</div>
+                        <div class="contact-value">8796-4508</div>
                     </div>
                 </div>
 
@@ -83,8 +82,8 @@ import { Send } from "@lucide/astro";
                         </svg>
                     </div>
                     <div class="contact-text">
-                        <div class="contact-label">Email</div>
-                        <div class="contact-value">hello@celebrate.com</div>
+                        <div class="contact-label">Correo</div>
+                        <div class="contact-value">jocysegura@hotmail.com</div>
                     </div>
                 </div>
 
@@ -99,18 +98,16 @@ import { Send } from "@lucide/astro";
                         </svg>
                     </div>
                     <div class="contact-text">
-                        <div class="contact-label">Location</div>
+                        <div class="contact-label">Ubicación</div>
                         <div class="contact-value">Alajuela, Costa Rica</div>
                     </div>
                 </div>
                 <div class="business-hours">
                     <h2>Horario Laboral</h2>
                     <div class="hours-item">
-                        Lunes - Viernes: 6:30 PM - 9:30 PM
                     </div>
                     <div class="hours-item">
-                        Las decoraciones se hacen los dias sabados y domingo con
-                        previa cita
+                        Se trabaja con previa cita
                     </div>
                 </div>
             </div>
@@ -141,10 +138,11 @@ import { Send } from "@lucide/astro";
         padding: 20px;
         border-radius: 15px;
         width: 500px;
+        margin-right: 200px;
     }
 
     .row {
-        margin-left: 5%;
+        /* margin-left: 0%; */
         display: flex;
         flex-direction: row;
         align-items: center;
