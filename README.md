@@ -34,10 +34,10 @@ Runs locally at `localhost:4321`.
 
 ## 🗺️ Roadmap
 
-- [ ] Hero section
-- [ ] Decoration gallery / portfolio
-- [ ] Services overview (event types covered)
-- [ ] About / company info
+- [X] Hero section
+- [X] Decoration gallery / portfolio
+- [X] Services overview (event types covered)
+- [X] About / company info
 - [ ] Contact section
 
 ## 📄 License
