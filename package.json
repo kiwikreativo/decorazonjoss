@@ -9,8 +9,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.6",
-    "@astrojs/react": "^4.4.2",
+    "@astrojs/check": "^0.9.9",
+    "@astrojs/react": "^6.0.1",
     "@hookform/resolvers": "^3.10.0",
     "@lucide/astro": "^0.555.0",
     "@radix-ui/react-accordion": "1.2.2",
@@ -43,7 +43,7 @@
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "@vercel/analytics": "latest",
-    "astro": "^5.16.1",
+    "astro": "^7.1.3",
     "autoprefixer": "^10.4.20",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -60,6 +60,7 @@
     "react-hook-form": "^7.60.0",
     "react-resizable-panels": "^2.1.7",
     "recharts": "2.15.4",
+    "sharp-cli": "^5.2.0",
     "sonner": "^1.7.4",
     "tailwind-merge": "^3.4.0",
     "tailwindcss-animate": "^1.0.7",

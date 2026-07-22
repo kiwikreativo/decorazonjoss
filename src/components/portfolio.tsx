@@ -23,7 +23,7 @@ export default function PortfolioGrid() {
                 </div>
 
             </section>
-            <div className="cards d-flex flex-direction-column justify-content-center align-items-center">
+            <div className="cards">
                 {filteredItems.map((item) => (
                     <div className="gallery" key={item.id}>
                         <div className="gallery-item">
@@ -43,4 +43,5 @@ export default function PortfolioGrid() {
         </>
     );
 }
+
 
