@@ -1,59 +1,20 @@
 ---
+
 ---
 
 <div class="contact-container" id="contact">
     <div class="salute">
         <h1 class="salute-title">Planeemos tu celebración al detalle</h1>
         <p class="salute-text">
-            Listos para crear memorias inolvidables? ponte en contacto y
-            empecemos a planear
+            Listos para crear memorias inolvidables? Agenda tu cita y empecemos
+            a planear
         </p>
     </div>
     <div class="contact">
         <div class="row" style="display: flex; justify-content: space between;">
-            <div class="col-6">
-                <div class="container-form">
-                    <div class="mb-3">
-                        <input
-                            type="text"
-                            class="form-control"
-                            required
-                            placeholder="Nombre"
-                        />
-                    </div>
-                    <div class="mb-3">
-                        <input
-                            type="email"
-                            class="form-control"
-                            required
-                            placeholder="Correo"
-                        />
-                    </div>
-                    <div class="mb-3">
-                        <input
-                            type="text"
-                            class="form-control"
-                            placeholder="Telefono"
-                        />
-                    </div>
-                    <div class="mb-3">
-                        <input
-                            type="text"
-                            class="form-control"
-                            placeholder="Tipo de evento"
-                            required
-                        />
-                    </div>
-                    <div class="mb-3">
-                        <textarea
-                            class="form-control"
-                            placeholder="Cuentanos acerca de tu evento."
-                            rows="3"></textarea>
-                    </div>
-                    <button class="submit">
-                        Enviar mensaje
-                    </button>
-                </div>
+            <div class="col-6 s-appointment">
+                <h3 class="appointment-text">Agenda tu Cita</h3>
+                <a href="" class="btn-redirect-calendly">Agendar!</a>
             </div>
             <div class="col-6 container-contact">
                 <!-- Phone -->
@@ -102,14 +63,6 @@
                         <div class="contact-value">Alajuela, Costa Rica</div>
                     </div>
                 </div>
-                <div class="business-hours">
-                    <h2>Horario Laboral</h2>
-                    <div class="hours-item">
-                    </div>
-                    <div class="hours-item">
-                        Se trabaja con previa cita
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -133,20 +86,39 @@
         margin: 0 auto;
     }
 
-    .container-form {
-        border: 2px solid #f6f3f4;
-        padding: 20px;
-        border-radius: 15px;
-        width: 500px;
-        margin-right: 200px;
+    .container-contact {
+        display: flex;
+        margin-top: 5%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
     }
 
     .row {
         /* margin-left: 0%; */
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+
+    .s-appointment {
+        margin: 2%;
+    }
+
+    .appointment-text {
+        text-transform: uppercase;
+        font-weight: 800;
+    }
+
+    .btn-redirect-calendly {
+        background-color: #ffafcc;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        margin-top: 20px;
     }
 
     .salute-title {
