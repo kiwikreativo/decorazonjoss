@@ -1,5 +1,6 @@
 ---
 import { Instagram, Facebook, CalendarRange } from "@lucide/astro";
+import profilePic from "../assets/jossprof.webp";
 ---
 
 <!--  -->
@@ -44,7 +45,7 @@ import { Instagram, Facebook, CalendarRange } from "@lucide/astro";
             </div>
         </div>
         <div class="col-4">
-            <img src="https://i.pravatar.cc/300" alt="" class="figure-bio" />
+            <img src={profilePic.src} alt="" class="figure-bio" />
         </div>
     </div>
 </div>
@@ -62,13 +63,13 @@ import { Instagram, Facebook, CalendarRange } from "@lucide/astro";
         text-align: left;
         padding: 100px 10%;
         margin: 0 auto;
-        
+
     }
     .row {
         display: flex;
         flex-direction: row;
         margin-left: 6%;
-        
+
     }
 
     .history-title {
@@ -120,7 +121,7 @@ import { Instagram, Facebook, CalendarRange } from "@lucide/astro";
 
     @media (max-width: 768px) {
         .container-history {
-            padding: 50px 5%; 
+            padding: 50px 5%;
             display: flex;
             flex-direction: column;
             width: 100%;
@@ -158,7 +159,7 @@ import { Instagram, Facebook, CalendarRange } from "@lucide/astro";
             width: 100%;
             padding: 2rem 0;
         }
-        
+
         .row {
             display: flex;
             flex-wrap: wrap;
@@ -166,24 +167,24 @@ import { Instagram, Facebook, CalendarRange } from "@lucide/astro";
             max-width: 900px;
             margin: 0 auto;
         }
-        
+
         .col-4 {
             width: 45%;
             margin: 0 2.5% 2rem;
             text-align: center;
         }
-        
+
         .social-icons,
         .social-icons-de {
             margin: 20px auto;
             justify-content: center;
         }
-        
+
         .figure-bio {
             margin: 0 auto;
             display: block;
         }
-        
+
         .history-title,
         .history-text {
             text-align: center;
