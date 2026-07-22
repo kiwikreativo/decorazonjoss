@@ -64,6 +64,7 @@ let creations: Creations[] = [
 </div>
 <style>
     @import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
     .container-creations {
         width: 100%;
         display: flex;
@@ -83,7 +84,8 @@ let creations: Creations[] = [
         justify-content: center;
         line-height: 2;
         width: 100%;
-        padding: clamp(1rem, 5vw, 3rem) clamp(1rem, 5vw, 3rem) 0 clamp(1rem, 5vw, 3rem);
+        padding: clamp(1rem, 5vw, 3rem) clamp(1rem, 5vw, 3rem) 0
+            clamp(1rem, 5vw, 3rem);
     }
 
     .greeting-h1 {
@@ -101,13 +103,14 @@ let creations: Creations[] = [
 
     /* cards grid layout for 3 columns on desktop */
     .cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    width: 100%;
-    margin-top: 20px;
-    gap: 20px;
-    padding: 0 clamp(1rem, 5vw, 3rem) clamp(1rem, 5vw, 3rem) clamp(1rem, 5vw, 3rem);
-}
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        margin-top: 20px;
+        gap: 20px;
+        padding: 0 clamp(1rem, 5vw, 3rem) clamp(1rem, 5vw, 3rem)
+            clamp(1rem, 5vw, 3rem);
+    }
 
     .gallery-item {
         display: flex;
@@ -120,7 +123,9 @@ let creations: Creations[] = [
         aspect-ratio: 1;
         object-fit: cover;
         border-radius: 10px;
-        transition: transform 0.3s ease-in-out, opacity 0.3s;
+        transition:
+            transform 0.3s ease-in-out,
+            opacity 0.3s;
     }
 
     .gallery-image:hover {
@@ -129,7 +134,6 @@ let creations: Creations[] = [
         opacity: 0.7;
     }
 
-    @import url("https://fonts.googleapis.com/css2?family=Henny+Penny&family=Rubik+Spray+Paint&display=swap");
     .btn-decoraciones {
         display: block;
         margin: 5% auto;
@@ -144,21 +148,20 @@ let creations: Creations[] = [
         border-radius: 10px;
         cursor: pointer;
     }
-    
 
     /* responsive tweaks */
     @media (max-width: 900px) {
-    .cards {
-        grid-template-columns: repeat(2, 1fr);
+        .cards {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
-}
 
-@media (max-width: 600px) {
-    .greeting-h1 {
-        font-size: 2rem;
+    @media (max-width: 600px) {
+        .greeting-h1 {
+            font-size: 2rem;
+        }
+        .cards {
+            grid-template-columns: 1fr;
+        }
     }
-    .cards {
-        grid-template-columns: 1fr;
-    }
-}
 </style>
