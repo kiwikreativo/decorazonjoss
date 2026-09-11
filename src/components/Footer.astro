@@ -1,6 +1,6 @@
 ---
 import "./../styles/footer.css";
-import { Instagram, Facebook, X } from "lucide-react";
+import { FacebookLogo, InstagramLogo } from "@phosphor-icons/react";
 ---
 
 <footer class="footer">
@@ -22,7 +22,7 @@ import { Instagram, Facebook, X } from "lucide-react";
                             d="M19 3L19.5 5.5L22 6L19.5 6.5L19 9L18.5 6.5L16 6L18.5 5.5L19 3Z"
                             fill="currentColor"></path>
                     </svg>
-                    <span class="brand-name">Celebrar</span>
+                    <span class="brand-name">Decorazon Joss</span>
                 </div>
                 <p class="brand-tagline">
                     Creando momentos mágicos y celebraciones inolvidables desde 2015.
@@ -48,7 +48,7 @@ import { Instagram, Facebook, X } from "lucide-react";
                 <ul class="footer-links">
                     <li><a href="/Portfolio">Portafolio</a></li>
                     <li><a href="/#contact">Contacto</a></li>
-                    <li><a href="/#AboutUs">Sobre Nosotros</a></li>
+                    <li><a href="/#about">Sobre Nosotros</a></li>
                 </ul>
             </div>
 
@@ -60,28 +60,19 @@ import { Instagram, Facebook, X } from "lucide-react";
                         href="https://instagram.com"
                         target="_blank"
                         rel="noopener noreferrer"
-                        aria-label="Instagram"
+                        aria-label="Instagram de Decorazon Joss"
                         class="icon"
                     >
-                        <i class="fa-brands fa-instagram"></i>
+                        <InstagramLogo size={21} weight="regular" />
                     </a>
                     <a
                         href="https://facebook.com"
                         target="_blank"
                         rel="noopener noreferrer"
-                        aria-label="Facebook"
+                        aria-label="Facebook de Decorazon Joss"
                         class="icon"
                     >
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-                    <a
-                        href="https://twitter.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Twitter"
-                        class="icon"
-                    >
-                        <i class="fa-brands fa-x-twitter"></i>
+                        <FacebookLogo size={21} weight="regular" />
                     </a>
                 </div>
             </div>
@@ -95,4 +86,3 @@ import { Instagram, Facebook, X } from "lucide-react";
         </div>
     </div>
 </footer>
-

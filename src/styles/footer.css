@@ -1,7 +1,7 @@
 /* Footer Styles */
 
 .footer {
-    background-color: #f8f8f8;
+    background-color: var(--surface);
     padding: 3rem 0 2rem;
     height: fit-content;
 }
@@ -34,17 +34,17 @@
 .sparkle-icon {
     width: 24px;
     height: 24px;
-    color: #000;
+    color: var(--primary);
 }
 
 .brand-name {
     font-size: 1.5rem;
     font-weight: 600;
-    color: #000;
+    color: var(--text-primary);
 }
 
 .brand-tagline {
-    color: #666;
+    color: var(--text-secondary);
     font-size: 0.95rem;
     line-height: 1.6;
     margin: 0;
@@ -59,7 +59,7 @@
 .footer-heading {
     font-size: 1.125rem;
     font-weight: 600;
-    color: #000;
+    color: var(--text-primary);
     margin: 0 0 1.5rem 0;
 }
 
@@ -73,14 +73,14 @@
 }
 
 .footer-links a {
-    color: #0066ff;
+    color: var(--text-secondary);
     text-decoration: none;
     font-size: 0.95rem;
     transition: color 0.2s ease;
 }
 
 .footer-links a:hover {
-    color: #a15d40;
+    color: var(--primary);
     text-decoration:solid;
 }
 
@@ -98,31 +98,27 @@
     justify-content: center;
     text-align: center;
     border: none;
-    background-color: rgba(255, 175, 204, 0.3);
+    background-color: var(--surface-muted);
     border-radius: 15px;
+    color: var(--lagune);
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
 }
 
 .social-links a:hover {
-    background-color: rgba(162, 210, 255, 0.3);
-    color: rgba(205, 180, 219, 0.8);
+    background-color: color-mix(in srgb, var(--lagune) 20%, var(--surface-muted));
+    color: var(--text-primary);
     transform: translateY(-2px);
-}
-
-.social-links .fa-brands {
-   font-size: 20px;
-   margin-top: 10px;
-   color: #81c3d7;
 }
 
 /* Footer Bottom */
 .footer-bottom {
     padding-top: 2rem;
-    border-top: 1px solid #e0e0e0;
+    border-top: 1px solid var(--border);
 }
 
 .copyright {
     text-align: center;
-    color: #666;
+    color: var(--text-secondary);
     font-size: 0.9rem;
     margin: 0;
 }
