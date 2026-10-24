@@ -31,10 +31,8 @@
     margin-bottom: 1rem;
 }
 
-.sparkle-icon {
-    width: 24px;
-    height: 24px;
-    color: var(--primary);
+.icon-footer{
+    color: #dc8c78;
 }
 
 .brand-name {

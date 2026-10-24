@@ -9,6 +9,9 @@ export default defineConfig({
   server: {
     host: true, // Allow external connections
     // Optionally add this too:
-    allowedHosts: ['daron-argenteous-warmly.ngrok-free.dev']
+    allowedHosts: [
+      'daron-argenteous-warmly.ngrok-free.dev',
+      'rotten-rules-work.loca.lt'
+    ]
   }
 });

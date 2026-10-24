@@ -61,6 +61,7 @@ export const portfolioItems: PortfolioItem[] = [
         image: img12.src,
         alt: "Colorful Christmas party decorations",
     },
+    // Cambiar esta imagen que es de 15 años
     {
         id: "wedding-1",
         title: "Matrimonio",

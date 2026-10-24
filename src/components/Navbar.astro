@@ -1,8 +1,82 @@
 ---
-import "./../styles/navbar.css";import "./../styles/globals.css";
+import "./../styles/navbar.css";
+import "./../styles/globals.css";
 import { Heart, List, Moon, Sun, X } from "@phosphor-icons/react";
 ---
-<header class="site-header"><nav class="nav-shell" aria-label="Navegación principal"><a class="brand" href="/" aria-label="Decorazon Joss, inicio"><Heart size={22} weight="fill"/><span>DecorazonJoss</span></a><div class="desktop-links"><a href="/">Inicio</a><a href="/#services">Servicios</a><a href="/#creations">Decoraciones</a><a href="/#about">Sobre mí</a></div><div class="nav-actions"><button class="theme-toggle" type="button" aria-label="Cambiar tema" title="Cambiar tema"><span class="sun"><Sun size={17} weight="bold"/></span><span class="moon"><Moon size={17} weight="bold"/></span></button><a class="reserve-link" href="/#contact">Reserva</a><button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu"><List className="open-icon" size={24}/><X className="close-icon" size={24}/></button></div><div class="mobile-menu" id="mobile-menu" aria-hidden="true"><a href="/">Inicio</a><a href="/#services">Servicios</a><a href="/#creations">Decoraciones</a><a href="/#about">Sobre mí</a><a href="/#contact">Reserva</a></div></nav></header>
+
+<header class="site-header">
+    <nav class="nav-shell" aria-label="Navegación principal">
+        <a class="brand" href="/" aria-label="Decorazon Joss, inicio"
+            ><Heart size={22} weight="fill" /><span>DecorazonJoss</span></a
+        ><div class="desktop-links">
+            <a href="/">Inicio</a><a href="/#services">Servicios</a><a
+                href="/#creations">Decoraciones</a
+            ><a href="/#about">Sobre mí</a>
+        </div><div class="nav-actions">
+            <button
+                class="theme-toggle"
+                type="button"
+                aria-label="Cambiar tema"
+                title="Cambiar tema"
+                ><span class="sun"><Sun size={17} weight="bold" /></span><span
+                    class="moon"><Moon size={17} weight="bold" /></span
+                ></button
+            ><a class="reserve-link" href="/#contact">Reserva</a><button
+                class="menu-toggle"
+                type="button"
+                aria-label="Abrir menú"
+                aria-expanded="false"
+                aria-controls="mobile-menu"
+                ><List className="open-icon" size={24} /><X
+                    className="close-icon"
+                    size={24}
+                /></button>
+        </div><div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+            <a href="/">Inicio</a><a href="/#services">Servicios</a><a
+                href="/#creations">Decoraciones</a
+            ><a href="/#about">Sobre mí</a><a href="/#contact">Reserva</a>
+        </div>
+    </nav>
+</header>
 <script>
-const root=document.documentElement;const tb=document.querySelector<HTMLButtonElement>('.theme-toggle');const setTheme=(t:string)=>{root.dataset.theme=t;localStorage.setItem('decorazon-theme',t);tb?.setAttribute('aria-label',t==='dark'?'Activar tema claro':'Activar tema oscuro')};setTheme(root.dataset.theme||'light');tb?.addEventListener('click',()=>setTheme(root.dataset.theme==='dark'?'light':'dark'));const mb=document.querySelector<HTMLButtonElement>('.menu-toggle');const menu=document.querySelector<HTMLElement>('.mobile-menu');const close=()=>{mb?.setAttribute('aria-expanded','false');menu?.setAttribute('aria-hidden','true');document.body.classList.remove('menu-open')};mb?.addEventListener('click',()=>{const open=mb.getAttribute('aria-expanded')==='true';mb.setAttribute('aria-expanded',String(!open));menu?.setAttribute('aria-hidden',String(open));document.body.classList.toggle('menu-open',!open)});menu?.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});document.addEventListener('click',e=>{if(mb?.getAttribute('aria-expanded')==='true'&&!document.querySelector('.nav-shell')?.contains(e.target as Node))close()});
+    const root = document.documentElement;
+    const tb = document.querySelector<HTMLButtonElement>(".theme-toggle");
+    const setTheme = (t: string) => {
+        root.dataset.theme = t;
+        localStorage.setItem("decorazon-theme", t);
+        tb?.setAttribute(
+            "aria-label",
+            t === "dark" ? "Activar tema claro" : "Activar tema oscuro",
+        );
+    };
+    setTheme(root.dataset.theme || "light");
+    tb?.addEventListener("click", () =>
+        setTheme(root.dataset.theme === "dark" ? "light" : "dark"),
+    );
+    const mb = document.querySelector<HTMLButtonElement>(".menu-toggle");
+    const menu = document.querySelector<HTMLElement>(".mobile-menu");
+    const close = () => {
+        mb?.setAttribute("aria-expanded", "false");
+        menu?.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("menu-open");
+    };
+    mb?.addEventListener("click", () => {
+        const open = mb.getAttribute("aria-expanded") === "true";
+        mb.setAttribute("aria-expanded", String(!open));
+        menu?.setAttribute("aria-hidden", String(open));
+        document.body.classList.toggle("menu-open", !open);
+    });
+    menu?.querySelectorAll("a").forEach((a) =>
+        a.addEventListener("click", close),
+    );
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") close();
+    });
+    document.addEventListener("click", (e) => {
+        if (
+            mb?.getAttribute("aria-expanded") === "true" &&
+            !document.querySelector(".nav-shell")?.contains(e.target as Node)
+        )
+            close();
+    });
 </script>
