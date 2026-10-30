@@ -1,7 +1,11 @@
 ---
 import "./../styles/footer.css";
 import { FacebookLogo, InstagramLogo, HeartIcon } from "@phosphor-icons/react";
+const actualYear = new Date().getFullYear();
+
+import { socialLinks } from "../lib/socialLinks";
 ---
+
 
 <footer class="footer">
     <div class="footer-container">
@@ -9,11 +13,16 @@ import { FacebookLogo, InstagramLogo, HeartIcon } from "@phosphor-icons/react";
             <!-- Brand Section -->
             <div class="footer-brand">
                 <div class="brand-logo">
-                    <HeartIcon size={22} weight="fill" className="icon-footer"/>
+                    <HeartIcon
+                        size={22}
+                        weight="fill"
+                        className="icon-footer"
+                    />
                     <span class="brand-name">Decorazon Joss</span>
                 </div>
                 <p class="brand-tagline">
-                    Creando momentos mágicos y celebraciones inolvidables desde 2015.
+                    Creando momentos mágicos y celebraciones inolvidables desde
+                    2015.
                 </p>
             </div>
 
@@ -45,7 +54,7 @@ import { FacebookLogo, InstagramLogo, HeartIcon } from "@phosphor-icons/react";
                 <h3 class="footer-heading">Síguenos</h3>
                 <div class="social-links">
                     <a
-                        href="https://instagram.com"
+                        href={socialLinks.instagram}
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Instagram de Decorazon Joss"
@@ -53,7 +62,7 @@ import { FacebookLogo, InstagramLogo, HeartIcon } from "@phosphor-icons/react";
                     >
                         <InstagramLogo size={21} weight="regular" />
                     </a>
-                    <a
+                    <!-- <a
                         href="https://facebook.com"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -61,7 +70,7 @@ import { FacebookLogo, InstagramLogo, HeartIcon } from "@phosphor-icons/react";
                         class="icon"
                     >
                         <FacebookLogo size={21} weight="regular" />
-                    </a>
+                    </a> -->
                 </div>
             </div>
         </div>
@@ -69,7 +78,8 @@ import { FacebookLogo, InstagramLogo, HeartIcon } from "@phosphor-icons/react";
         <!-- Copyright Section -->
         <div class="footer-bottom">
             <p class="copyright">
-                &copy; 2025 Decorazon Joss. Todos los derechos reservados.
+                &copy; <span id="current-year">{actualYear}</span> Decorazon Joss. Todos los derechos
+                reservados.
             </p>
         </div>
     </div>
