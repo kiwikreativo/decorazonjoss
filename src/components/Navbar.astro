@@ -1,77 +1,82 @@
 ---
 import "./../styles/navbar.css";
-
-import { Heart } from "@lucide/astro";
+import "./../styles/globals.css";
+import { Heart, List, Moon, Sun, X } from "@phosphor-icons/react";
 ---
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-        <div class="navbar-logo">
-            <Heart class="logo-icon" />
-            <a class="navbar-brand" href="#"> DecorazonJoss</a>
+<header class="site-header">
+    <nav class="nav-shell" aria-label="Navegación principal">
+        <a class="brand" href="/" aria-label="Decorazon Joss, inicio"
+            ><Heart size={22} weight="fill" /><span>DecorazonJoss</span></a
+        ><div class="desktop-links">
+            <a href="/">Inicio</a><a href="/#services">Servicios</a><a
+                href="/#creations">Decoraciones</a
+            ><a href="/#about">Sobre mí</a>
+        </div><div class="nav-actions">
+            <button
+                class="theme-toggle"
+                type="button"
+                aria-label="Cambiar tema"
+                title="Cambiar tema"
+                ><span class="sun"><Sun size={17} weight="bold" /></span><span
+                    class="moon"><Moon size={17} weight="bold" /></span
+                ></button
+            ><a class="reserve-link" href="/#contact">Reserva</a><button
+                class="menu-toggle"
+                type="button"
+                aria-label="Abrir menú"
+                aria-expanded="false"
+                aria-controls="mobile-menu"
+                ><List className="open-icon" size={24} /><X
+                    className="close-icon"
+                    size={24}
+                /></button>
+        </div><div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+            <a href="/">Inicio</a><a href="/#services">Servicios</a><a
+                href="/#creations">Decoraciones</a
+            ><a href="/#about">Sobre mí</a><a href="/#contact">Reserva</a>
         </div>
-        <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-        >
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="menu-icon"
-            >
-                <line x1="4" x2="20" y1="12" y2="12"></line>
-                <line x1="4" x2="20" y1="6" y2="6"></line>
-                <line x1="4" x2="20" y1="18" y2="18"></line>
-            </svg>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#"
-                        >Inicio</a
-                    >
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Decoraciones</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link">Contactame</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link">Sobre Mi</a>
-                </li>
-            </ul>
-            <button class="btn-calendly" type="submit">Reserva</button>
-        </div>
-    </div>
-</nav>
-
-<!-- <style>
-    @media (max-width: 700px) {
-        .navbar-nav {
-            font-size: 1rem;
-            font-weight: bold;
-            line-height: 2;
-            margin: 1rem auto;
-        }
-        .btn-calendly {
-            width: 80%;
-            padding: 10px 20px;
-            font-size: 1rem;
-            border-radius: 15px;
-        }
-    }
-</style> -->
+    </nav>
+</header>
+<script>
+    const root = document.documentElement;
+    const tb = document.querySelector<HTMLButtonElement>(".theme-toggle");
+    const setTheme = (t: string) => {
+        root.dataset.theme = t;
+        localStorage.setItem("decorazon-theme", t);
+        tb?.setAttribute(
+            "aria-label",
+            t === "dark" ? "Activar tema claro" : "Activar tema oscuro",
+        );
+    };
+    setTheme(root.dataset.theme || "light");
+    tb?.addEventListener("click", () =>
+        setTheme(root.dataset.theme === "dark" ? "light" : "dark"),
+    );
+    const mb = document.querySelector<HTMLButtonElement>(".menu-toggle");
+    const menu = document.querySelector<HTMLElement>(".mobile-menu");
+    const close = () => {
+        mb?.setAttribute("aria-expanded", "false");
+        menu?.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("menu-open");
+    };
+    mb?.addEventListener("click", () => {
+        const open = mb.getAttribute("aria-expanded") === "true";
+        mb.setAttribute("aria-expanded", String(!open));
+        menu?.setAttribute("aria-hidden", String(open));
+        document.body.classList.toggle("menu-open", !open);
+    });
+    menu?.querySelectorAll("a").forEach((a) =>
+        a.addEventListener("click", close),
+    );
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") close();
+    });
+    document.addEventListener("click", (e) => {
+        if (
+            mb?.getAttribute("aria-expanded") === "true" &&
+            !document.querySelector(".nav-shell")?.contains(e.target as Node)
+        )
+            close();
+    });
+</script>

@@ -1,9 +1,9 @@
 /* Footer Styles */
 
 .footer {
-    background-color: #f8f8f8;
-    padding: 4rem 0 2rem;
-    margin-top: auto;
+    background-color: var(--surface);
+    padding: 3rem 0 2rem;
+    height: fit-content;
 }
 
 .footer-container {
@@ -31,20 +31,18 @@
     margin-bottom: 1rem;
 }
 
-.sparkle-icon {
-    width: 24px;
-    height: 24px;
-    color: #000;
+.icon-footer{
+    color: #dc8c78;
 }
 
 .brand-name {
     font-size: 1.5rem;
     font-weight: 600;
-    color: #000;
+    color: var(--text-primary);
 }
 
 .brand-tagline {
-    color: #666;
+    color: var(--text-secondary);
     font-size: 0.95rem;
     line-height: 1.6;
     margin: 0;
@@ -59,7 +57,7 @@
 .footer-heading {
     font-size: 1.125rem;
     font-weight: 600;
-    color: #000;
+    color: var(--text-primary);
     margin: 0 0 1.5rem 0;
 }
 
@@ -73,15 +71,15 @@
 }
 
 .footer-links a {
-    color: #0066ff;
+    color: var(--text-secondary);
     text-decoration: none;
     font-size: 0.95rem;
     transition: color 0.2s ease;
 }
 
 .footer-links a:hover {
-    color: #0052cc;
-    text-decoration: underline;
+    color: var(--primary);
+    text-decoration:solid;
 }
 
 /* Social Links */
@@ -90,38 +88,35 @@
     gap: 1rem;
 }
 
-.social-links a {
+.social-links .icon {
     width: 40px;
     height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid #000;
-    border-radius: 8px;
-    color: #000;
-    transition: all 0.2s ease;
+    text-align: center;
+    border: none;
+    background-color: var(--surface-muted);
+    border-radius: 15px;
+    color: var(--lagune);
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
 }
 
 .social-links a:hover {
-    background-color: #000;
-    color: #fff;
+    background-color: color-mix(in srgb, var(--lagune) 20%, var(--surface-muted));
+    color: var(--text-primary);
     transform: translateY(-2px);
-}
-
-.social-links svg {
-    width: 20px;
-    height: 20px;
 }
 
 /* Footer Bottom */
 .footer-bottom {
     padding-top: 2rem;
-    border-top: 1px solid #e0e0e0;
+    border-top: 1px solid var(--border);
 }
 
 .copyright {
     text-align: center;
-    color: #666;
+    color: var(--text-secondary);
     font-size: 0.9rem;
     margin: 0;
 }
@@ -168,10 +163,5 @@
     .social-links a {
         width: 36px;
         height: 36px;
-    }
-
-    .social-links svg {
-        width: 18px;
-        height: 18px;
     }
 }
