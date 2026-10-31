@@ -1,9 +1,9 @@
 ---
 import "./../styles/footer.css";
-import { FacebookLogo, InstagramLogo, HeartIcon } from "@phosphor-icons/react";
+import { InstagramLogo, HeartIcon } from "@phosphor-icons/react";
 const actualYear = new Date().getFullYear();
 
-import { socialLinks } from "../lib/socialLinks";
+import { socialLinks } from "../lib/site-data";
 ---
 
 
@@ -31,11 +31,11 @@ import { socialLinks } from "../lib/socialLinks";
                 <h3 class="footer-heading">Servicios</h3>
                 <ul class="footer-links">
                     <li>
-                        <a href="#">Revelación de género</a>
+                        <a href="/#services">Revelación de género</a>
                     </li>
-                    <li><a href="#">Baby Showers</a></li>
-                    <li><a href="#">Fiestas de cumpleaños</a></li>
-                    <li><a href="#">Bodas</a></li>
+                    <li><a href="/#services">Baby Showers</a></li>
+                    <li><a href="/#services">Fiestas de cumpleaños</a></li>
+                    <li><a href="/#services">Bodas</a></li>
                 </ul>
             </div>
 
@@ -43,7 +43,7 @@ import { socialLinks } from "../lib/socialLinks";
             <div class="footer-section">
                 <h3 class="footer-heading">Compañía</h3>
                 <ul class="footer-links">
-                    <li><a href="/Portfolio">Portafolio</a></li>
+                    <li><a href="/portfolio/">Portafolio</a></li>
                     <li><a href="/#contact">Contacto</a></li>
                     <li><a href="/#about">Sobre Nosotros</a></li>
                 </ul>
@@ -62,15 +62,6 @@ import { socialLinks } from "../lib/socialLinks";
                     >
                         <InstagramLogo size={21} weight="regular" />
                     </a>
-                    <!-- <a
-                        href="https://facebook.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Facebook de Decorazon Joss"
-                        class="icon"
-                    >
-                        <FacebookLogo size={21} weight="regular" />
-                    </a> -->
                 </div>
             </div>
         </div>

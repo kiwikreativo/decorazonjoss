@@ -3,12 +3,16 @@
     import Layout from "@/layouts/Layout.astro"
     import PortfolioGrid from "./../components/portfolio"
 ---
-<Layout>
+<Layout
+    title="Portafolio de decoración de eventos | Decorazon Joss"
+    description="Explora decoraciones de Decorazon Joss para cumpleaños, baby showers, revelaciones de género y eventos especiales."
+    canonicalPath="/portfolio/"
+>
     <div class="container-portfolio">
         <div class="salute">
             <p class="eyebrow">Nuestro portafolio</p>
-            <h1>Conoce nuestras decoraciones realizadas</h1>
-            <p>En este espacio podrás explorar nuestras creaciones, toda la vida y alegría que hemos brindado a cada celebración.</p>
+            <h1>Decoraciones creadas para momentos inolvidables</h1>
+            <p>Cada celebración comienza con una historia, una idea y una emoción especial. Explora algunos de los espacios que hemos transformado para cumpleaños, baby showers, revelaciones de género y otros momentos compartidos en familia.</p>
         </div>
         <div class="btn-filters">
             <PortfolioGrid client:load />

@@ -1,0 +1,36 @@
+---
+import { business } from "../lib/site-data";
+
+if (!Astro.site) {
+    return;
+}
+
+const schema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: business.name,
+    url: Astro.site.href,
+    image: new URL("/social-card.jpg", Astro.site).href,
+    telephone: business.phoneInternational,
+    email: business.email,
+    foundingDate: String(business.foundedIn),
+    founder: {
+        "@type": "Person",
+        name: business.founder,
+    },
+    areaServed: {
+        "@type": "AdministrativeArea",
+        name: business.location,
+    },
+    sameAs: [business.instagram],
+    knowsAbout: [
+        "Decoración de cumpleaños",
+        "Decoración de baby showers",
+        "Decoración de bodas",
+        "Revelaciones de género",
+        "Decoración de eventos especiales",
+    ],
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
