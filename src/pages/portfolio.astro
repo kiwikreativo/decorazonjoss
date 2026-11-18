@@ -1,0 +1,46 @@
+---
+    import "./../styles/globals.css"
+    import Layout from "@/layouts/Layout.astro"
+    import PortfolioGrid from "./../components/portfolio"
+---
+<Layout
+    title="Portafolio de decoración de eventos | Decorazon Joss"
+    description="Explora decoraciones de Decorazon Joss para cumpleaños, baby showers, revelaciones de género y eventos especiales."
+    canonicalPath="/portfolio/"
+>
+    <div class="container-portfolio">
+        <div class="salute">
+            <p class="eyebrow">Nuestro portafolio</p>
+            <h1>Decoraciones creadas para momentos inolvidables</h1>
+            <p>Cada celebración comienza con una historia, una idea y una emoción especial. Explora algunos de los espacios que hemos transformado para cumpleaños, baby showers, revelaciones de género y otros momentos compartidos en familia.</p>
+        </div>
+        <div class="btn-filters">
+            <PortfolioGrid client:load />
+        </div>
+    </div> 
+</Layout>
+<style>
+
+.container-portfolio{
+   width: 100%;
+   max-width: 1280px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: left;
+   padding: clamp(1rem, 5vw, 3rem);
+   margin: 0 auto;
+   padding-top: 160px;
+}
+
+.salute{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: min(100%, 900px);
+    line-height: 1;
+}
+.salute h1{font-size:clamp(3rem,7vw,6rem);line-height:.95;margin-bottom:1.5rem}.salute>p:last-child{max-width:720px}.btn-filters{width:100%}
+
+</style>

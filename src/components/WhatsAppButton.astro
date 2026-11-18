@@ -1,0 +1,38 @@
+---
+import { WhatsappLogo } from "@phosphor-icons/react";
+import { business } from "../lib/site-data";
+
+const whatsappURL = `https://wa.me/${business.phoneInternational.replace("+", "")}`;
+---
+
+<a
+    class="whatsapp-float"
+    href={whatsappURL}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Escríbenos por WhatsApp"
+>
+    <WhatsappLogo size={30} weight="fill" aria-hidden="true" />
+</a>
+
+<style>
+    .whatsapp-float {
+        position: fixed;
+        right: 20px;
+        bottom: max(20px, env(safe-area-inset-bottom));
+        z-index: 90;
+        width: 60px;
+        height: 60px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        background: #d6897e;
+        /* dark ink: white on #d6897e is ~2.5:1, below the 3:1 icon contrast minimum */
+        color: #2a1b19;
+        box-shadow: var(--shadow);
+        transition: transform 0.22s;
+    }
+    .whatsapp-float:hover {
+        transform: translateY(-2px);
+    }
+</style>

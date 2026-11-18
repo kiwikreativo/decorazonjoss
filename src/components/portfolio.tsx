@@ -1,5 +1,5 @@
 import { categories, portfolioItems, type PortfolioCategory } from "../lib/portfolio-data";
-import React, { useState } from "react";
+import { useState } from "react";
 import "./../styles/portfolio.css"
 
 export default function PortfolioGrid() {
@@ -16,6 +16,8 @@ export default function PortfolioGrid() {
                             <button
                                 key={cat.id}
                                 onClick={() => setFilter(cat.id)}
+                                 type="button"
+                                 aria-pressed={filter === cat.id}
                                 className={`btn-filter ${filter === cat.id ? 'active' : ''}`}
                             >{cat.name}</button>
                         ))}
@@ -27,9 +29,20 @@ export default function PortfolioGrid() {
                 {filteredItems.map((item) => (
                     <div className="gallery" key={item.id}>
                         <div className="gallery-item">
-                            <img src={item.image} alt={item.alt} className="gallery-image" />
+                            <img
+                                src={item.image}
+                                alt={item.alt}
+                                className="gallery-image"
+                                loading="lazy"
+                                decoding="async"
+                                width={item.width}
+                                height={item.height}
+                            />
                             <div className="gallery-overlay">
-                                <h3 className="gallery-title">{item.title}</h3>
+                                <div>
+                                    <h3 className="gallery-title">{item.title}</h3>
+                                    <p className="gallery-description">{item.description}</p>
+                                </div>
                             </div>
                         </div>
                     </div>

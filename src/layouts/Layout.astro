@@ -1,62 +1,77 @@
 ---
 import Navbar from "@/components/Navbar.astro";
 import Footer from "@/components/Footer.astro";
+import LocalBusinessSchema from "@/components/LocalBusinessSchema.astro";
+import WhatsAppButton from "@/components/WhatsAppButton.astro";
+
+interface Props {
+    title: string;
+    description: string;
+    canonicalPath?: string;
+    socialImage?: string;
+    socialImageAlt?: string;
+}
+
+const {
+    title,
+    description,
+    canonicalPath = "/",
+    socialImage = "/social-card.jpg",
+    socialImageAlt = "Decoración de eventos realizada por Decorazon Joss",
+} = Astro.props;
+
+const canonicalURL = Astro.site ? new URL(canonicalPath, Astro.site) : undefined;
+const socialImageURL = Astro.site ? new URL(socialImage, Astro.site) : socialImage;
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<script
-			src="https://kit.fontawesome.com/509c179d58.js"
-			crossorigin="anonymous"></script>
-		<title>DecorazonJoss</title>
-		<link
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-			rel="stylesheet"
-			integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-			crossorigin="anonymous"
-		/>
-	</head>
-	<body>
-		<Navbar />
-		<main>
-			<slot />
-		</main>
-		<Footer />
-		<script
-			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-			integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-			crossorigin="anonymous"></script>
-		<script
-			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
-			integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
-			crossorigin="anonymous"></script>
-	</body>
-</html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content={description} />
+        <meta name="generator" content={Astro.generator} />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2" />
+        {canonicalURL && <link rel="canonical" href={canonicalURL} />}
 
-<style>
-	@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-	@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&family=Rubik+Spray+Paint&display=swap');
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-		padding-top: 30px;
-	}
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		font-family: "Antonio", sans-serif !important;
-	}
-	p {
-		font-family: "Inter", sans-serif !important;
-	}
-	
-</style>
+        <title>{title}</title>
+
+        <!-- Open Graph: WhatsApp, Facebook and LinkedIn -->
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="es_CR" />
+        <meta property="og:site_name" content="Decorazon Joss" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        {canonicalURL && <meta property="og:url" content={canonicalURL} />}
+        <meta property="og:image" content={socialImageURL} />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content={socialImageAlt} />
+
+        <!-- Twitter/X card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={socialImageURL} />
+        <meta name="twitter:image:alt" content={socialImageAlt} />
+
+        <LocalBusinessSchema />
+
+        <script is:inline>
+            (() => {
+                const savedTheme = localStorage.getItem("decorazon-theme");
+                const preferredTheme = matchMedia("(prefers-color-scheme: dark)").matches
+                    ? "dark"
+                    : "light";
+                document.documentElement.dataset.theme = savedTheme || preferredTheme;
+            })();
+        </script>
+    </head>
+    <body>
+        <Navbar />
+        <main class="overflow-x-hidden w-full max-w-full"><slot /></main>
+        <Footer />
+        <WhatsAppButton />
+    </body>
+</html>

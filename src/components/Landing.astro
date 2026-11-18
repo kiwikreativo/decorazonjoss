@@ -1,18 +1,7 @@
 ---
-// import "./globals.css";
-import Hero from "./Hero.astro";
-import Services from "./Services.astro";
-import Creations from "./Creations.astro";
-import History from "./History.astro";
-import Contact from "./Contact.astro";
+import Hero from "./Hero.astro";import Services from "./Services.astro";import WhyUs from "./WhyUs.astro";import Creations from "./Creations.astro";import History from "./History.astro";import Contact from "./Contact.astro";
 ---
-
-<div id="container">
-	<Hero />
-	<Services />
-	<Creations />
-	<History />
-	<Contact />
-</div>
-
-<style></style>
+<Hero/><Services/><WhyUs/><Creations/><History/><Contact/>
+<script>
+import gsap from "gsap";import { ScrollTrigger } from "gsap/ScrollTrigger";gsap.registerPlugin(ScrollTrigger);const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;if(!reduce){gsap.from('.hero-copy>*',{opacity:0,y:32,stagger:.09,duration:.8,ease:'power3.out',delay:.15});gsap.from('.hero-visual',{opacity:0,scale:.88,duration:1.15,ease:'power3.out',delay:.25});document.querySelectorAll('.service-card,.reason-grid article').forEach(el=>gsap.from(el,{scrollTrigger:{trigger:el,start:'top 88%'},opacity:0,y:50,duration:.65,ease:'power2.out'}));gsap.from('.catalogue-panel',{scrollTrigger:{trigger:'.catalogue',start:'top 88%'},opacity:0,y:42,stagger:.07,duration:.7,ease:'power2.out'});}
+</script>
