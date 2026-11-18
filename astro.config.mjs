@@ -21,5 +21,8 @@ export default defineConfig({
     ]
   },
 
-  adapter: netlify()
+  // edgeFunctions off: dev emulation needs a Deno server and the project has no edge functions
+  adapter: netlify({
+    devFeatures: { environmentVariables: false, images: true, edgeFunctions: false }
+  })
 });

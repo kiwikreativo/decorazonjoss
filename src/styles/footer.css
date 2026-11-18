@@ -165,3 +165,8 @@
         height: 36px;
     }
 }
+
+.credit { margin-top: 0.5rem; }
+.credit a { color: inherit; font-weight: 600; text-decoration: none; }
+.credit a:hover { color: var(--primary); }
+.credit svg { vertical-align: middle; }
