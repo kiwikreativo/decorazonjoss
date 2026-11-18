@@ -9,9 +9,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.9",
-    "@astrojs/react": "^6.0.1",
-    "@astrojs/sitemap": "^3.7.4",
+    "@astrojs/check": "^0.9.12",
+    "@astrojs/netlify": "^8.2.14",
+    "@astrojs/react": "^7.1.9",
+    "@astrojs/sitemap": "^3.7.5",
     "@hookform/resolvers": "^3.10.0",
     "@lucide/astro": "^0.555.0",
     "@phosphor-icons/react": "^2.1.10",
@@ -45,7 +46,7 @@
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "@vercel/analytics": "latest",
-    "astro": "^7.1.3",
+    "astro": "^7.4.12",
     "autoprefixer": "^10.4.20",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
